@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Word Learner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chapter-bar">
+        <label for="chapterSelect">Chapter:</label>
+        <select id="chapterSelect"></select>
+    </div>
+    <div class="container">
+        <div class="nav left" id="prevBtn">
+            <span class="arrow">&#8592;</span>
+            <div class="nav-word" id="prevWord"></div>
+            <div class="nav-def" id="prevDef"></div>
+        </div>
+        <div class="main">
+            <div class="word-row">
+                <div class="word" id="word"></div>
+            </div>
+            <div class="phonetic" id="pos"></div>
+            <div class="definition" id="definition"></div>
+            <div class="controls-row">
+                <button id="audioBtn" class="audio-btn" title="Play pronunciation">🔊 Listen</button>
+                <button id="phonicsToggle" class="toggle-btn" title="Toggle phonics mode">Chunked Phonics</button>
+            </div>
+        </div>
+        <div class="nav right" id="nextBtn">
+            <span class="arrow">&#8594;</span>
+            <div class="nav-word" id="nextWord"></div>
+            <div class="nav-def" id="nextDef"></div>            
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <!-- words.js removed, JSON will be loaded dynamically in app.js -->
+</body>
+</html>

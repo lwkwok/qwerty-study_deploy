@@ -1,0 +1,204 @@
+/* Chapter dropdown styles */
+.chapter-bar {
+    width: 100vw;
+    background: #f3f3fa;
+    padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px #f0f0f0;
+}
+#chapterSelect {
+    font-size: 1.1rem;
+    padding: 0.3rem 1.2rem 0.3rem 0.7rem;
+    border-radius: 1.2rem;
+    border: 1px solid #d0d0e0;
+    background: #fff;
+    color: #444;
+    outline: none;
+    margin-left: 0.2rem;
+}
+.chunked-phonics .hyphen {
+    color: #bbb;
+    font-weight: 400;
+    font-size: 0.9em;
+    margin: 0 0.05em;
+    user-select: none;
+}
+body {
+    background: #f8f7fb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 2.2rem);
+    width: 100vw;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+.nav {
+    width: 20vw;
+    min-width: 180px;
+    color: #888d9b;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+.nav.left {
+    text-align: left;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 0 2vw 2vw;
+    z-index: 10;
+}
+.nav.right {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 2vw 2vw 0;
+    z-index: 10;
+}
+.arrow {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.nav-word {
+    font-size: 0.7rem;
+    font-family: 'Fira Mono', monospace;
+    margin-bottom: 0.2rem;
+}
+.nav-def {
+    font-size: 0.5rem;
+    color: #b0b3bb;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.main {
+    flex: 1;
+    text-align: center;
+}
+.word-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.word {
+    font-size: 3rem;
+    font-family: 'Fira Mono', monospace;
+    color: #5a6170;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.15em;
+}
+.chunked-phonics {
+    font-size: 3rem;
+    font-family: 'Fira Mono', monospace;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    display: flex;
+    gap: 0.2em;
+}
+.chunked-phonics .chunk {
+    padding: 0 0.1em;
+    border-radius: 0.2em;
+    font-weight: 600;
+}
+.phonetic {
+    color: #7a7e8a;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+.definition {
+    font-size: 1.2rem;
+    color: #222;
+    margin-top: 1.5rem;
+}
+.controls-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+.audio-btn, .toggle-btn {
+    margin: 0;
+}
+.audio-btn {
+    display: block;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.1rem;
+    background: #e6e6f0;
+    color: #444;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #eaeaea;
+    transition: background 0.2s;
+}
+.audio-btn:hover {
+    background: #d1d1e0;
+}
+.toggle-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.05rem;
+    background: #e6e6f0;
+    color: #444;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #eaeaea;
+    transition: background 0.2s;
+}
+.toggle-btn.active {
+    background: #b3e6ff;
+    color: #0a3d62;
+    font-weight: bold;
+}
+@media (max-width: 700px) {
+    .container { flex-direction: column; }
+    .nav { width: 100vw; min-width: unset; }
+    .main { width: 100vw; }
+    .nav.right {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin: 0 1vw 1vw 0;
+        width: auto;
+        min-width: 120px;
+    }
+    .nav.left {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        margin: 0 0 1vw 1vw;
+        width: auto;
+        min-width: 120px;
+    }
+    .controls-row {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+    .audio-btn, .toggle-btn {
+        width: auto;
+        min-width: 0;
+        font-size: 1rem;
+        padding: 0.6rem 1.1rem;
+    }
+}
